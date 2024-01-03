@@ -7,11 +7,36 @@ import (
 	"training/models"
 )
 
+func ViewProfile(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "Invalid Request", http.StatusMethodNotAllowed)
+		return
+	}
+
+	//destructing from request body
+	var reqBody struct {
+		UserID string `json:"userID"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&reqBody); err != nil {
+		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		return
+	}
+
+	user, userExists := models.Users[reqBody.UserID]
+	if !userExists {
+		http.Error(w, "User not found", http.StatusNotFound)
+		return
+	}
+	common.EncodeToJSON(w, user)
+}
+
 func Login(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
 		return
 	}
+
 	//parsing from the request body
 	var reqBody struct {
 		SecretCode string `json:"secretCode"`
@@ -34,10 +59,11 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "User not found", http.StatusNotFound)
 }
 
+// Modying Register function
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method != http.MethodPost {
-		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		http.Error(w, common.Bad, http.StatusMethodNotAllowed)
 		return
 	}
 	// parsing the request body
@@ -46,8 +72,19 @@ func Register(w http.ResponseWriter, r *http.Request) {
 		Email string `json:"email"`
 	}
 
+	//Adding validation checks
+	if reqBody.Name == "" {
+		http.Error(w, common.NR, http.StatusBadRequest)
+		return
+	}
+
+	if !common.IsValidEmail(reqBody.Email) {
+		http.Error(w, common.IEA, http.StatusBadRequest)
+		return
+	}
+
 	if err := json.NewDecoder(r.Body).Decode(&reqBody); err != nil {
-		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		http.Error(w, common.BadBody, http.StatusBadRequest)
 		return
 	}
 
@@ -64,30 +101,6 @@ func Register(w http.ResponseWriter, r *http.Request) {
 	}
 
 	models.Users[user.ID] = user
-	common.EncodeToJSON(w, user)
-}
-
-func ViewProfile(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
-		return
-	}
-
-	//destructing from request body
-	var reqBody struct {
-		UserID string `json:"userID"`
-	}
-
-	if err := json.NewDecoder(r.Body).Decode(&reqBody); err != nil {
-		http.Error(w, "Invalid request body", http.StatusBadRequest)
-		return
-	}
-
-	user, userExists := models.Users[reqBody.UserID]
-	if !userExists {
-		http.Error(w, "User not found", http.StatusNotFound)
-		return
-	}
 	common.EncodeToJSON(w, user)
 }
 

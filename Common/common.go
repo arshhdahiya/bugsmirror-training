@@ -6,7 +6,15 @@ import (
 	"github.com/google/uuid"
 	"net/http"
 	"strconv"
+	"strings"
 	"training/models"
+)
+
+var (
+	Bad     string = "Invalid Request"
+	BadBody string = "Invalid Request Body"
+	NR      string = "Name is Required"
+	IEA     string = "Invalid Email Address"
 )
 
 func GenerateUniqueID() string {
@@ -36,4 +44,8 @@ func EncodeToJSON(w http.ResponseWriter, data interface{}) {
 	if err != nil {
 		return
 	}
+}
+
+func IsValidEmail(email string) bool {
+	return strings.Contains(email, "@") && strings.Contains(email, ".")
 }

@@ -5,11 +5,17 @@ import (
 	"training/services"
 )
 
+var (
+	register string = "/register"
+	login    string = "/login"
+	view     string = "/viewProfile"
+)
+
 func main() {
 
-	http.HandleFunc("/login", services.Login)
-	http.HandleFunc("/register", services.Register)
-	http.HandleFunc("/viewProfile", services.ViewProfile)
+	http.HandleFunc(login, services.Login)
+	http.HandleFunc(register, services.Register)
+	http.HandleFunc(view, services.ViewProfile)
 	http.HandleFunc("/getAllSongsOfPlaylist", services.GetAllSongs)
 	http.HandleFunc("/createPlaylist", services.CreatePlaylist)
 	http.HandleFunc("/addSongtoPlaylist", services.AddSongs)
