@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/tbBackArrow" android:layout_width="@dimen/margin_20" android:layout_height="@dimen/margin_20" android:src="@drawable/ic_nav_back" android:contentDescription="@string/cd_image" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/black_white" android:id="@id/tbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/comments" android:layout_marginStart="30.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/tbBackArrow" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <View android:id="@id/toolbarDivider" android:background="@color/grey_divider" android:padding="@dimen/margin_4dp" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginEnd="@dimen/margin_2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <include android:id="@id/shimmerLayout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_30" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" layout="@layout/shimmer_layout" />
+    <WebView android:id="@id/wbComments" android:layout_width="fill_parent" android:layout_height="@dimen/margin_0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarDivider" />
+    <FrameLayout android:id="@id/mContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

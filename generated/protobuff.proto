@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package generated;
+
+message RegisterRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message User {
+  string id = 1;
+  string secret_code = 2;
+  string name = 3;
+  string email = 4;
+}
+
+service UserService {
+  rpc Register(RegisterRequest) returns (User);
+}

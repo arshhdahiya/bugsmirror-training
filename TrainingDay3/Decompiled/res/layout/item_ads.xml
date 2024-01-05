@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ad_parent_view" android:background="@color/ads_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/margin_10" android:minHeight="260.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_12" android:textColor="@color/black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_3sdp" android:text="@string/ads_text" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ad_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_3sdp" android:layout_marginBottom="10.0dip" android:minHeight="250.0dip" />
+</LinearLayout>

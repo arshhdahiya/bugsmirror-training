@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_18" android:textStyle="bold" android:textColor="@color/red_breaking_news" android:id="@id/tvTimeIn24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12.40 PM" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/font_20" android:textStyle="bold" android:textColor="@color/grey_breaking_news" android:id="@id/tvTimeInWords" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(2 min pahale)" android:layout_marginStart="@dimen/font_18" app:layout_constraintStart_toEndOf="@id/tvTimeIn24" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

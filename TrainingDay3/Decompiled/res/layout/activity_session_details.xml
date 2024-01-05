@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tbVideo" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_toolbar" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/main_swiperefresh" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideo">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvSessionLanding" android:background="@color/white_black" android:padding="@dimen/margin_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategoryVideoLanding" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/sessionLandingShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideo" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_layout_video_landing" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include android:id="@id/progressSessionLanding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

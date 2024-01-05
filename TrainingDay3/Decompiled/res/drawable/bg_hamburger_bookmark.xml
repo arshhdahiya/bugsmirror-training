@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/bg_hamburger_bookmark" android:endColor="@color/white_black_dark" android:angle="270.0" android:type="linear" android:centerColor="@color/white_black_dark" />
+</shape>

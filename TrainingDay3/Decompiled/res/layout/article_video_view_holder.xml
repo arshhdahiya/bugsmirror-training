@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/video_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_6sdp" android:layout_marginTop="@dimen/_3sdp" android:layout_marginRight="@dimen/_6sdp" android:layout_marginBottom="@dimen/_3sdp" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer_bottom_video" android:layout_width="fill_parent" android:layout_height="250.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/at_placeholder" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/bottom_thumb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@string/play" />
+        <ImageView android:layout_width="@dimen/paging_60" android:layout_height="@dimen/paging_60" android:src="@drawable/ic_play_red_circle_filled" android:layout_centerInParent="true" android:contentDescription="@string/play" />
+    </RelativeLayout>
+</RelativeLayout>

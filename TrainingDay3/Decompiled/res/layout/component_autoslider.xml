@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.kotlinbase.uicomponents.PhotoCountCommentShareComponent android:id="@id/cmpCountShare" android:layout_width="116.0dip" android:layout_height="40.0dip" android:elevation="3.0dip" app:layout_constraintBottom_toBottomOf="@id/vpSlider" app:layout_constraintEnd_toEndOf="@id/vpSlider" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/vpSlider" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.android.kotlinbase.customLibrary.instadotlib.InstaDotView android:id="@id/tbViewPagerTab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" app:dot_activeColor="@color/red" app:dot_activeSize="10.0dip" app:dot_inactiveColor="@color/white_black" app:dot_inactiveSize="8.0dip" app:dot_margin="6.0dip" app:dot_mediumSize="8.0dip" app:dot_smallSize="5.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

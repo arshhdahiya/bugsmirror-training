@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/pull_to_refresh_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/lav_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:lottie_autoPlay="true" app:lottie_fileName="refresh.json" app:lottie_loop="true" app:lottie_repeatMode="restart" />
+</LinearLayout>

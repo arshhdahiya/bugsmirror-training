@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@color/blue_blog_highlight</item>
+        <item name="android:navigationBarColor">@color/blue_blog_highlight</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorAccent">@color/atSettingsBlueColour</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+</resources>

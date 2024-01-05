@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_exit_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.android.kotlinbase.customize.CustomFontTextView android:textSize="18.0dip" android:textColor="@color/app_exit_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_exit_video" app:customFontStyle="bold" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/short_video_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" />
+    </LinearLayout>
+    <include android:id="@id/adParentLayout" layout="@layout/item_add_new_article" />
+    <LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_1sdp">
+        <com.android.kotlinbase.customize.CustomFontTextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center_horizontal" android:paddingLeft="12.0dip" android:paddingTop="@dimen/_5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exit_dialog_message" app:customFontStyle="semiBold" />
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/cancel" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CANCEL" />
+            <Button android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/exit" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXIT" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

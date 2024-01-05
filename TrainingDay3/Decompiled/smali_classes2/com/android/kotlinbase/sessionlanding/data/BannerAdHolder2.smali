@@ -1,0 +1,451 @@
+.class public final Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;
+.super Lcom/android/kotlinbase/sessionlanding/data/SessionBaseViewHolder;
+.source "SourceFile"
+
+
+# instance fields
+.field private mAdView:Lcom/google/android/gms/ads/AdView;
+
+.field private final pref:Lcom/android/kotlinbase/preference/Preferences;
+
+.field private final section:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Ljava/lang/String;)V
+    .locals 1
+
+    const-string v0, "inflater"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "parent"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "section"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lcom/android/kotlinbase/sessionlanding/api/viewstates/SessionItemVs$SessionItemType;->ADSVIEW:Lcom/android/kotlinbase/sessionlanding/api/viewstates/SessionItemVs$SessionItemType;
+
+    invoke-virtual {v0}, Lcom/android/kotlinbase/sessionlanding/api/viewstates/SessionItemVs$SessionItemType;->getValue()I
+
+    move-result v0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/kotlinbase/sessionlanding/data/SessionBaseViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;I)V
+
+    iput-object p3, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->section:Ljava/lang/String;
+
+    new-instance p1, Lcom/android/kotlinbase/preference/Preferences;
+
+    invoke-direct {p1}, Lcom/android/kotlinbase/preference/Preferences;-><init>()V
+
+    iput-object p1, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    return-void
+.end method
+
+.method public static final synthetic access$loadAdMobAd(Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->loadAdMobAd(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$loadAdMobAd(Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->loadAdMobAd(Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;)V
+
+    return-void
+.end method
+
+.method private final loadAdMobAd(Ljava/lang/String;)V
+    .locals 11
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    const-string v1, ""
+
+    const-string v2, "Builder()\n              \u2026\n                .build()"
+
+    const-string v3, "Itgddevprice"
+
+    const-string v4, "ListingPage"
+
+    const-string v5, "\u0939\u094b\u092e"
+
+    const-string v6, "category"
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lcom/google/android/gms/ads/AdView;
+
+    sget-object v7, Lcom/android/kotlinbase/AajTakApplication;->Companion:Lcom/android/kotlinbase/AajTakApplication$Companion;
+
+    invoke-virtual {v7}, Lcom/android/kotlinbase/AajTakApplication$Companion;->getAppContext()Lcom/android/kotlinbase/AajTakApplication;
+
+    move-result-object v8
+
+    invoke-direct {v0, v8}, Lcom/google/android/gms/ads/AdView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    new-instance v8, Lcom/google/android/gms/ads/AdSize;
+
+    const/16 v9, 0x12c
+
+    const/16 v10, 0xfa
+
+    invoke-direct {v8, v9, v10}, Lcom/google/android/gms/ads/AdSize;-><init>(II)V
+
+    invoke-virtual {v0, v8}, Lcom/google/android/gms/ads/BaseAdView;->setAdSize(Lcom/google/android/gms/ads/AdSize;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/BaseAdView;->setAdUnitId(Ljava/lang/String;)V
+
+    :goto_0
+    iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    sget v0, Lcom/android/kotlinbase/R$id;->ad_container:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout;
+
+    const-string v0, "null cannot be cast to non-null type android.widget.LinearLayout"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance p1, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    invoke-direct {p1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;-><init>()V
+
+    filled-new-array {v5, v4}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/collections/o;->i([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v6, v0}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->addCustomTargeting(Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    invoke-virtual {v0}, Lcom/android/kotlinbase/preference/Preferences;->getAdsPriceCategory()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v1, v0
+
+    :goto_1
+    invoke-virtual {p1, v3, v1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->addCustomTargeting(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    invoke-virtual {v0}, Lcom/android/kotlinbase/preference/Preferences;->getPPID()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->setPublisherProvidedId(Ljava/lang/String;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->build()Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v7}, Lcom/android/kotlinbase/AajTakApplication$Companion;->getAppContext()Lcom/android/kotlinbase/AajTakApplication;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/ads/AdRequest;->isTestDevice(Landroid/content/Context;)Z
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->c(Ljava/lang/Object;)V
+
+    new-instance v1, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$loadAdMobAd$2;
+
+    invoke-direct {v1}, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$loadAdMobAd$2;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/BaseAdView;->setAdListener(Lcom/google/android/gms/ads/AdListener;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-eqz v0, :cond_4
+
+    goto :goto_3
+
+    :cond_2
+    const-string p1, "SessionAds"
+
+    const-string v0, "NOT NULL CASE"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    invoke-direct {p1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;-><init>()V
+
+    filled-new-array {v5, v4}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/collections/o;->i([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v6, v0}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->addCustomTargeting(Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    invoke-virtual {v0}, Lcom/android/kotlinbase/preference/Preferences;->getAdsPriceCategory()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v1, v0
+
+    :goto_2
+    invoke-virtual {p1, v3, v1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->addCustomTargeting(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    invoke-virtual {v0}, Lcom/android/kotlinbase/preference/Preferences;->getPPID()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->setPublisherProvidedId(Ljava/lang/String;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest$Builder;->build()Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-eqz v0, :cond_4
+
+    :goto_3
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/BaseAdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
+
+    :cond_4
+    return-void
+.end method
+
+.method private final loadAdMobAd(Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lcom/google/android/gms/ads/AdView;
+
+    sget-object v1, Lcom/android/kotlinbase/AajTakApplication;->Companion:Lcom/android/kotlinbase/AajTakApplication$Companion;
+
+    invoke-virtual {v1}, Lcom/android/kotlinbase/AajTakApplication$Companion;->getAppContext()Lcom/android/kotlinbase/AajTakApplication;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/ads/AdView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    new-instance v1, Lcom/google/android/gms/ads/AdSize;
+
+    const/16 v2, 0x12c
+
+    const/16 v3, 0xfa
+
+    invoke-direct {v1, v2, v3}, Lcom/google/android/gms/ads/AdSize;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/BaseAdView;->setAdSize(Lcom/google/android/gms/ads/AdSize;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/BaseAdView;->setAdUnitId(Ljava/lang/String;)V
+
+    :goto_0
+    iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    sget v0, Lcom/android/kotlinbase/R$id;->ad_container:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout;
+
+    const-string v0, "null cannot be cast to non-null type android.widget.LinearLayout"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    iget-object p1, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->c(Ljava/lang/Object;)V
+
+    new-instance v0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$loadAdMobAd$1;
+
+    invoke-direct {v0}, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$loadAdMobAd$1;-><init>()V
+
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/ads/BaseAdView;->setAdListener(Lcom/google/android/gms/ads/AdListener;)V
+
+    iget-object p1, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
+
+    :cond_1
+    const-string p1, "SessionAds"
+
+    const-string v0, "NOT NULL CASE"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    if-eqz p1, :cond_2
+
+    :goto_1
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/ads/BaseAdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
+
+    :cond_2
+    return-void
+.end method
+
+
+# virtual methods
+.method public bind(Lcom/android/kotlinbase/sessionlanding/api/model/News;ILcom/android/kotlinbase/sessionlanding/BookMarkDownloadCallbacks;)V
+    .locals 4
+
+    const-string p2, "data"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p2, "bookMarkDownloadCallbacks"
+
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Lcom/android/kotlinbase/preference/Preferences;->getPreference(Landroid/content/Context;)V
+
+    new-instance p2, Lcom/amazon/device/ads/DTBAdRequest;
+
+    invoke-direct {p2}, Lcom/amazon/device/ads/DTBAdRequest;-><init>()V
+
+    const/4 p3, 0x1
+
+    new-array p3, p3, [Lcom/amazon/device/ads/DTBAdSize;
+
+    new-instance v0, Lcom/amazon/device/ads/DTBAdSize;
+
+    const/16 v1, 0x12c
+
+    const/16 v2, 0xfa
+
+    const-string v3, "59424cb9-f27e-4b09-8ece-18c022314cc7"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/amazon/device/ads/DTBAdSize;-><init>(IILjava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    aput-object v0, p3, v1
+
+    invoke-virtual {p2, p3}, Lcom/amazon/device/ads/DTBAdRequest;->O([Lcom/amazon/device/ads/DTBAdSize;)V
+
+    new-instance p3, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$bind$1;
+
+    invoke-direct {p3, p0, p1}, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2$bind$1;-><init>(Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;Lcom/android/kotlinbase/sessionlanding/api/model/News;)V
+
+    invoke-virtual {p2, p3}, Lcom/amazon/device/ads/DTBAdRequest;->y(Lcom/amazon/device/ads/DTBAdCallback;)V
+
+    return-void
+.end method
+
+.method public final getMAdView()Lcom/google/android/gms/ads/AdView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    return-object v0
+.end method
+
+.method public final getPref()Lcom/android/kotlinbase/preference/Preferences;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->pref:Lcom/android/kotlinbase/preference/Preferences;
+
+    return-object v0
+.end method
+
+.method public final getSection()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->section:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final setMAdView(Lcom/google/android/gms/ads/AdView;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/kotlinbase/sessionlanding/data/BannerAdHolder2;->mAdView:Lcom/google/android/gms/ads/AdView;
+
+    return-void
+.end method

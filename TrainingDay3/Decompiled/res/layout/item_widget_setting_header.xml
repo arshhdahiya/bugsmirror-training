@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/headerItem" android:background="@color/white_black" android:padding="@dimen/margin_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_18" android:textColor="@color/black_white" android:id="@id/tvWidgetSettingsHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="head" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/dropDown" android:layout_width="@dimen/margin_18" android:layout_height="@dimen/margin_18" android:src="@drawable/ic_down_arrow" android:contentDescription="@string/cd_image" android:layout_marginEnd="@dimen/margin_12" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

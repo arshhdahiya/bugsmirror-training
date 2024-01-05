@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="14.0dip" android:width="14.0dip" android:viewportWidth="14.0" android:viewportHeight="14.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/scorecard_bat_color" android:pathData="M10.181,5.4a0.416,0.416 0,0 1,-0.059 -0.176L8.803,3.906c-0.058,0 -0.088,-0.029 -0.147,-0.029a1.367,1.367 0,0 1,-0.528 -0.382,0.358 0.358,0 0,0 -0.469,0L0.24,10.913a0.8,0.8 0,0 0,-0.117 1A6.617,6.617 0,0 0,2.088 13.873a0.769,0.769 0,0 0,0.792 0.029,0.527 0.527,0 0,0 0.205,-0.146l7.419,-7.419a0.328,0.328 0,0 0,0 -0.469C10.415,5.723 10.298,5.573 10.181,5.4Z" />
+    <path android:fillColor="@color/scorecard_bat_color" android:pathData="M13.978,0.982h0l-0.938,-0.939h0a0.142,0.142 0,0 0,-0.205 0l-0.353,0.352a0.11,0.11 0,0 0,0 0.176L9.258,3.793a0.538,0.538 0,0 1,-0.147 0.118l1,1a0.3,0.3 0,0 1,0.117 -0.147l3.255,-3.225c0.059,0.058 0.118,0.029 0.176,0l0.323,-0.381A0.188,0.188 0,0 0,13.978 0.982Z" />
+</vector>

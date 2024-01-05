@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/btnFacebook" android:background="@drawable/ic_facebook_login" android:layout_width="@dimen/social_media_icon_dimen" android:layout_height="@dimen/social_media_icon_dimen" />
+    <Button android:gravity="end" android:id="@id/btnTwitterlogin" android:background="@drawable/twitter_x" android:layout_width="@dimen/social_media_icon_dimen" android:layout_height="@dimen/social_media_icon_dimen" android:layout_marginStart="@dimen/social_media_icon_margin" android:layout_toEndOf="@id/btnFacebook" />
+</RelativeLayout>

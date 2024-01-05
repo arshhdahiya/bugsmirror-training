@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_game" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_game" android:background="@drawable/bg_greybox_oval_large_curve" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_10" android:scaleType="fitXY" android:contentDescription="@string/game" android:outlineProvider="background" app:layout_constraintBottom_toTopOf="@id/tv_game" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/black_white" android:gravity="start" android:id="@id/tv_game" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

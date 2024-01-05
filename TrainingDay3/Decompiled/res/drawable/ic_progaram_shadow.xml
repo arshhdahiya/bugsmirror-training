@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="99.0dip" android:width="115.0dip" android:viewportWidth="115.0" android:viewportHeight="99.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_progaram_shadow__0" android:pathData="M8,99a3,3 0,0 1,-3 -3L5,23h-2a3,3 0,0 1,-3 -3L0,3a3,3 0,0 1,3 -3h109a3,3 0,0 1,3 3v17a3,3 0,0 1,-3 3h-2L110,96a3,3 0,0 1,-3 3Z" />
+</vector>

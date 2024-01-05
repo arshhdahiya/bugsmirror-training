@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/app_update" android:visibility="visible" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/app_update" />
+    <View android:id="@id/firstViewLine" android:background="@color/grey_seperator" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintBottom_toTopOf="@id/rvCategoryVideoLanding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/app_update" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvCategoryVideoLanding" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/firstViewLine" />
+    <include android:id="@id/no_connection_layout" android:visibility="gone" layout="@layout/no_connection" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/main_swiperefresh" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategoryVideoLanding">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvVideoLanding" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategoryVideoLanding" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/videoLandingShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_layout_video_landing" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include android:id="@id/progressPagerVideoLanding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

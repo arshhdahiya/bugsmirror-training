@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, user-scalable=no'/>
+    <script type="text/javascript">
+        !function (e, f, u, i) {
+            if (!document.getElementById(i)) {
+                e.async = 1;
+                e.src = u;
+                e.id = i;
+                f.parentNode.insertBefore(e, f);
+            }
+        }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            'https://cdn.taboola.com/libtrc/%s/mobile-loader.js',
+            'tb-mobile-loader-script');
+    </script>
+    <link rel="shortcut icon" href="#"/>
+</head>
+
+<body style='margin:0;padding:2px;border:0px blue solid;overflow:visible;%s'>
+
+<div id='taboola1'>
+</div>
+
+<script type='text/javascript'>
+    window._taboola = window._taboola || [];
+
+    _taboola.push({
+        %s: '%s', <!--mPageType, mPageId-->
+        url: '%s' <!--mPageUrl-->
+    });
+
+    _taboola.push({
+        mode: '%s',
+        container: 'taboola1',
+        placement: '%s',
+        framework: '%s',
+        target_type: '%s'
+    });
+
+    _taboola["mobile"] = [];
+    _taboola["mobile"].push({
+        publisher:"%s",
+        // set view id in order to prevent duplicated between different placements (optional)
+        taboola_view_id:%s
+    });
+
+    _taboola.push({
+        flush: true
+    });
+
+</script>
+
+</body>
+</html>

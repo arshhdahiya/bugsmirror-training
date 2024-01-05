@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="center" android:orientation="vertical" android:layout_width="125.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" app:cardCornerRadius="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/round_border_white" android:padding="@dimen/_5sdp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:paddingLeft="@dimen/_5sdp" android:paddingRight="@dimen/_5sdp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin_12" android:paddingHorizontal="@dimen/_5sdp">
+            <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/black_white" android:gravity="start|center" android:id="@id/tv_bookmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bookmark" style="@style/RobotoTextViewStyle" />
+        </RelativeLayout>
+        <View android:gravity="start|center" android:background="@color/grey_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/_7sdp" />
+        <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/black_white" android:gravity="start|center" android:id="@id/tv_tts" android:paddingLeft="@dimen/_5sdp" android:paddingRight="@dimen/_5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Text to Speech" android:paddingHorizontal="@dimen/_5sdp" style="@style/RobotoTextViewStyle" />
+        <View android:background="@color/grey_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/_7sdp" />
+        <TextView android:textSize="@dimen/text_12sp" android:textColor="@color/black_white" android:gravity="start|center" android:id="@id/text_size" android:paddingLeft="@dimen/_5sdp" android:paddingRight="@dimen/_5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="@dimen/margin_12" android:paddingHorizontal="@dimen/_5sdp" style="@style/RobotoTextViewStyle" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

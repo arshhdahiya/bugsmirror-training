@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/ll_main" app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/appBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <FrameLayout android:id="@id/MainHometoolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+                    <include android:id="@id/homeToolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/home_toolbar" />
+                </FrameLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/offline_overlay" android:background="@color/colorBlack_80" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/main_content_frame" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <View android:background="@drawable/circular_red" android:layout_width="8.0dip" android:layout_height="8.0dip" />
+                <TextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/white" android:padding="@dimen/padding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/you_are_now_offline" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/main_content_frame" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/offline_overlay" />
+            <include android:id="@id/no_connection_layout" android:visibility="gone" layout="@layout/no_connection" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_main" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/footerAdLayout" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+            <FrameLayout android:id="@id/adViewContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="2.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:id="@id/bottom_nav_divider" android:background="@drawable/bottom_nav_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" app:layout_constraintBottom_toTopOf="@id/fl_bottom_bar_home" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        <FrameLayout android:id="@id/fl_bottom_bar_home" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/margin_10">
+            <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottomNavigationView" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:elevation="@dimen/margin_10" app:itemIconTint="@null" app:itemTextColor="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/shotVideotoolbar" android:background="@color/colorTransparent" android:padding="@dimen/margin_10" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:layout_gravity="start" android:id="@id/videohamburgerIcon" android:layout_width="@dimen/margin_24" android:layout_height="@dimen/margin_20" android:layout_marginTop="@dimen/margin_5" android:src="@drawable/ic_hamburger_icon" android:scaleType="centerInside" android:layout_marginStart="10.0dip" app:tint="@color/atSettingsBlueColour" />
+        <ImageView android:textColor="@color/white_black" android:background="@drawable/ic_india_today" android:visibility="invisible" android:layout_width="@dimen/margin_44" android:layout_height="@dimen/margin_36" android:scaleType="centerInside" android:layout_marginStart="@dimen/margin_50" />
+    </FrameLayout>
+    <include layout="@layout/dragging_widget" />
+    <View android:id="@id/close_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="52.0dip" app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@id/close_left" android:layout_width="52.0dip" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" />
+    <View android:layout_gravity="end" android:id="@id/close_right" android:layout_width="52.0dip" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" />
+    <View android:id="@id/close_btm" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="52.0dip" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

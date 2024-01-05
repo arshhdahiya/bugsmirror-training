@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="shared_images" path="Tak/" />
+    <external-path name="download_images" path="Tak/" />
+    <external-path name="external" path="." />
+    <files-path name="comment" path="." />
+</paths>

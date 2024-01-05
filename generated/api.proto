@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+service Register{
+  rpc create(User) returns (CreateResponse)
+}

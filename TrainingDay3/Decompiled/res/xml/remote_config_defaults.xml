@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>common_apis</key>
+        <value>{
+            "s_lnd": "https://atappfeeds.intoday.in/appapi/at/section_landing",
+            "n_list": "https://atappfeeds.intoday.in/appapi/at/newslist",
+            "p_details": "https://atappfeeds.intoday.in/appapi/at/programdetail",
+            "article_details": "https://atappfeeds.intoday.in/appapi/at/",
+            "photo_list": "https://atappfeeds.intoday.in/appapi/at/photolist",
+            "video_list": "https://atappfeeds.intoday.in/appapi/at/videolist",
+            "photo_detail": "https://atappfeeds.intoday.in/appapi/at/photodetail",
+            "video_detail": "https://atappfeeds.intoday.in/appapi/at/videodetail",
+            "live_blog": "https://atappfeeds.intoday.in/appapi/at/",
+            "dynamic_splash_expiry_time": 1641979990,
+            "dynamic_splash_updated_time": 1640528788,
+            "dynamic_splash_detail_data":
+            "https://akm-img-a-in.tosshub.com/test/pankaj/at_configs_live_important/dynamic_splash.json",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_IOS_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_IOS_LP_Mid_300x250",
+            "live_blog_ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_Liveblog_Top_300x250",
+            "live_blog_ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_Liveblog_Btm_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 5,
+            "ad_frequency": 8,
+            "live_blog_ad_first_position": 1,
+            "live_blog_ad_frequency": 5
+            }</value>
+    </entry>
+    <entry>
+        <key>app_update_dialogue</key>
+        <value>{
+            "is_app_update_required": true,
+            "app_version": "6.0",
+            "config_url": "",
+            "config_url_updated_on": "09-09-2021 16:49"
+            }</value>
+    </entry>
+    <entry>
+        <key>block_livetv</key>
+        <value>{
+            "block_live": true,
+            "block_audio": false,
+            "country_code_api_url": "https://feeds.intoday.in/geocheck",
+            "country_list": [
+            {
+            "country_code": "US",
+            "channel_list": [
+            {
+            "channel_id": "1",
+            "message": "आजतक लाइव टीवी आपके क्षेत्र में उपलब्ध नहीं है। आप यहां नवीनतम समाचार और
+            कार्यक्रम देख सकते हैं"
+            },
+            {
+            "channel_id": "2",
+            "message": "इंडिया टुडे लाइव टीवी आपके क्षेत्र में उपलब्ध नहीं है। आप यहां नवीनतम समाचार
+            और कार्यक्रम देख सकते हैं"
+            }
+            ]
+            }
+            ]
+            }</value>
+    </entry>
+    <entry>
+        <key>interstitial_ads</key>
+        <value>{
+            "app_exit_ad_enabled": true,
+            "newspresso_ad_enabled": true,
+            "photo_detail_ad_enabled": false,
+            "news_section_ad_enabled": true,
+            "news_detail_ad_enabled": true,
+            "config_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/app_config_imp/ad/interstitials_config.json",
+            "config_updated_on": "31-12-2021 14:45"
+            }</value>
+    </entry>
+    <entry>
+        <key>toggle_features</key>
+        <value>{
+            "search_enabled": true,
+            "taboola_enabled": true,
+            "article_link_open_inside_app": true
+            } </value>
+    </entry>
+    <entry>
+        <key>toggle_sdks</key>
+        <value>{
+            {
+            "pushwoosh_sdk_enabled": true,
+            "facebook_sdk_enabled": true,
+            "firebase_sdk_enabled": true,
+            "comscore_sdk_enabled": true,
+            "twitter_sdk_enabled": true
+            }</value>
+    </entry>
+    <entry>
+        <key>navigation_menu</key>
+        <value>{
+            "menus": [
+            {
+            "menu_id": "1",
+            "id": "0",
+            "title": "होम",
+            "type": "top news",
+            "ty": "home",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/atnew_resources/Home_non-selected.png",
+            "selected_icon_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/atnew_resources/Home.png",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": true,
+            "bottom_position": 1,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/v3/home",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_HP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_HP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3,
+            "config_url": "",
+            "widget_url": ""
+            },
+            {
+            "menu_id": "2",
+            "id": "0",
+            "title": "पॉडकास्ट",
+            "type": "podcast",
+            "ty": "podcast",
+            "webview_url": "",
+            "content_url": "",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/icons_2020_06/pod_ios_inact.png",
+            "selected_icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/icons_2020_06/pod_ios_act.png",
+            "is_new": true,
+            "is_horizontal_menu": false,
+            "horizontal_position": 0,
+            "bottom_position": 3,
+            "is_bottom_menu": true,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/",
+            "ad_unit_zone1": "",
+            "ad_unit_zone2": "",
+            "ad_size": "",
+            "ad_first_position": 0,
+            "ad_frequency": 0,
+            "config_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/app_config_imp/podcast/podcast_config.json"
+            },
+            {
+            "menu_id": "2",
+            "id": "0",
+            "title": "लाइव टीवी",
+            "type": "live_tv",
+            "ty": "live_tv",
+            "webview_url": "",
+            "content_url": "",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/atnew_resources/Live-Tv_non-selected.png",
+            "selected_icon_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/atnew_resources/Live-Tv_selected.png",
+            "is_new": true,
+            "is_horizontal_menu": false,
+            "horizontal_position": 0,
+            "is_bottom_menu": true,
+            "bottom_position": 2,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/livetv_channellist",
+            "ad_unit_zone1": "AT_And_Watch_Mid_300x250",
+            "ad_unit_zone2": "",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 3,
+            "ad_frequency": 5,
+            "config_url":
+            "https://akm-img-a-in.tosshub.com/app/at-app/app_config_imp/livetv/livetv_config.json"
+            },
+            {
+            "menu_id": "9",
+            "id": "300769",
+            "title": "भारत",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300769",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3,
+            "widget_url": ""
+            },
+            {
+            "menu_id": "4",
+            "id": "0",
+            "title": "फोटो",
+            "type": "photolist",
+            "ty": "photolist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/photos/",
+            "icon_url": "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/Photos.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/photolanding",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "3",
+            "id": "0",
+            "title": "वीडियो",
+            "type": "videolist",
+            "ty": "videolist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/videos/",
+            "icon_url": "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/Videos.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": true,
+            "bottom_position": 4,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/videolanding",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 6
+            },
+            {
+            "menu_id": "7",
+            "id": "300772",
+            "title": "मनोरंजन",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/entertainment/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_movies.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 5,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300772",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 4
+            },
+            {
+            "menu_id": "9",
+            "id": "300777",
+            "title": "धर्म",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/religion",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_religion.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300777",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "5",
+            "id": "300778",
+            "title": "लाइफस्टाइल",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/lifestyle",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_gadget.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300778",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "300771",
+            "title": "खेल",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300771",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "8",
+            "id": "300791",
+            "title": "कार्यक्रम ",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/crime/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_crime.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": false,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300791",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "300770",
+            "title": "विश्व",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300770",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_IOS_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_IOS_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "300773",
+            "title": "बिजनेस",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300773",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "422634",
+            "title": "चुटकुले",
+            "type": "newslist",
+            "ty": "newslist",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/newslist?id=422634",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "421853",
+            "title": "साइंस न्यूज़",
+            "type": "newslist",
+            "ty": "newslist",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/newslist?id=421853",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "427313",
+            "title": "हेल्थ न्यूज़",
+            "type": "newslist",
+            "ty": "newslist",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/newslist?id=427313",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "426253",
+            "title": "विचार एवं विश्लेषण",
+            "type": "newslist",
+            "ty": "newslist",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/newslist?id=426253",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "10",
+            "id": "300780",
+            "title": "एजुकेशन",
+            "type": "newslist",
+            "ty": "sessionlist",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": true,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/section_landing?id=300780",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_And_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_And_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 1,
+            "ad_frequency": 3
+            },
+            {
+            "menu_id": "9",
+            "id": "300773",
+            "title": "Programs",
+            "type": "Programs",
+            "ty": "Programs",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": false,
+            "is_horizontal_menu": false,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": false,
+            "hamburger_position": 0,
+            "feed_url": "https://atappfeeds.intoday.in/appapi/at/programlist",
+            "ad_unit_zone1": "/1007232/Aajtak_Apps/AT_IOS_LP_Top_300x250",
+            "ad_unit_zone2": "/1007232/Aajtak_Apps/AT_IOS_LP_Mid_300x250",
+            "ad_size": "336x280,300x250,250x250",
+            "ad_first_position": 3,
+            "ad_frequency": 5,
+            "config_url": ""
+            },
+            {
+            "menu_id": "9",
+            "id": "300773",
+            "title": "आजतक HD",
+            "type": "webview",
+            "ty": "webview",
+            "webview_url": "https://www.aajtakhd.com/",
+            "content_url": "https://www.aajtakhd.com/",
+            "icon_url": "https://akm-img-a-in.tosshub.com/aajtak/app/images/Aajtak_hd.png",
+            "selected_icon_url": "https://akm-img-a-in.tosshub.com/aajtak/app/images/Aajtak_hd.png",
+            "is_new": false,
+            "is_horizontal_menu": true,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 1,
+            "is_hamburger_menu": true,
+            "hamburger_position": 0
+            },
+            {
+            "menu_id": "9",
+            "id": "300771",
+            "title": "सेटिंग्स",
+            "type": "settings",
+            "ty": "settings",
+            "webview_url": "",
+            "content_url": "https://www.aajtak.in/sports/",
+            "icon_url":
+            "https://akm-img-a-in.tosshub.com/indiatoday/appicon/rest/at/ic_menu_sports.png",
+            "selected_icon_url": "",
+            "is_new": false,
+            "is_horizontal_menu": false,
+            "horizontal_position": 0,
+            "is_bottom_menu": false,
+            "bottom_position": 3,
+            "is_hamburger_menu": true,
+            "hamburger_position": 1
+            }
+            ]
+            }</value>
+    </entry>
+    <entry>
+        <key>sticky_ads</key>
+        <value>{
+            "sticky_home": "/1007232/Testing_APP_Ads/AT_And_HP_Sticky_320x50",
+            "sticky_ros": "/1007232/Testing_APP_Ads/AT_And_ROS_Sticky_320x50"
+            }</value>
+    </entry>
+</defaultsMap>

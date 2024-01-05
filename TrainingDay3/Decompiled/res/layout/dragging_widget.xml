@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/drag_parent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="40.0dip" android:layout_marginEnd="@dimen/margin_20" />
+    <FrameLayout android:layout_gravity="end|bottom|center" android:id="@id/drag_web_container" android:background="@color/colorTransparent" android:visibility="gone" android:layout_width="136.0dip" android:layout_height="124.0dip" android:layout_marginBottom="130.0dip" android:layout_marginEnd="@dimen/margin_10">
+        <WebView android:layout_gravity="start|bottom|center" android:id="@id/home_web" android:background="@color/colorTransparent" android:visibility="visible" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_6" android:layout_marginEnd="@dimen/margin_8" />
+        <RelativeLayout android:gravity="center" android:layout_gravity="start|bottom|center" android:id="@id/frame_retry" android:background="@color/white" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin_6" android:layout_marginEnd="@dimen/margin_8">
+            <RelativeLayout android:id="@id/layout_retry" android:background="@drawable/border_bg_retry" android:paddingTop="@dimen/padding_8" android:paddingBottom="@dimen/padding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/margin_0" android:paddingEnd="@dimen/padding_14">
+                <ImageView android:id="@id/img_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_retry" android:layout_centerVertical="true" android:contentDescription="@string/app_name" android:layout_marginStart="@dimen/margin_8" />
+                <TextView android:textSize="@dimen/font_default_14" android:textColor="@color/color_retry_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" android:layout_marginStart="@dimen/margin_4" android:layout_toEndOf="@id/img_retry" app:customFontStyle="medium" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/iv_close" android:background="@drawable/circular_red" android:padding="3.0dip" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="7.0dip" android:src="@drawable/ic_close_white" android:layout_marginEnd="8.0dip" />
+    </FrameLayout>
+    <View android:id="@id/remove_top" android:layout_width="fill_parent" android:layout_height="52.0dip" />
+    <View android:id="@id/remove_left" android:layout_width="52.0dip" android:layout_height="fill_parent" />
+    <View android:layout_gravity="bottom" android:id="@id/remove_btm" android:layout_width="fill_parent" android:layout_height="52.0dip" />
+    <View android:layout_gravity="end" android:id="@id/remove_right" android:layout_width="52.0dip" android:layout_height="fill_parent" />
+</FrameLayout>

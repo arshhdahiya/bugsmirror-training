@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:background="@color/customize_menu_toolbar_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/tbBackArrow" android:background="?selectableItemBackground" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/back_icon" android:scaleType="fitCenter" android:contentDescription="@string/cd_image" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.android.kotlinbase.customize.CustomFontTextView android:textSize="22.0sp" android:textColor="@color/black_white" android:id="@id/tbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manage_home" android:layout_marginStart="30.0dip" app:customFontStyle="bold" app:fontFamily="@font/notosans_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/tbBackArrow" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@color/customize_menu_background" android:paddingLeft="@dimen/itg_10dp" android:paddingRight="@dimen/itg_10dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat android:background="@drawable/bg_box_customize_info" android:paddingLeft="30.0dip" android:paddingTop="15.0dip" android:paddingRight="30.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip">
+            <com.android.kotlinbase.customize.CustomFontTextView android:textSize="14.0sp" android:textColor="@color/black_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manage_home_info" android:textAlignment="center" app:customFontStyle="medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginTop="13.0dip">
+            <com.android.kotlinbase.customize.CustomFontTextView android:textSize="20.0sp" android:textColor="#ffd71920" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manage_home_tab" android:layout_alignParentLeft="true" app:customFontStyle="bold" app:fontFamily="@font/notosans_bold" />
+            <Button android:textSize="16.0sp" android:textColor="@color/reset_btn_color" android:id="@id/reset" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manage_reset" android:layout_alignParentRight="true" android:textAlignment="textEnd" />
+        </RelativeLayout>
+        <LinearLayout android:background="@color/recycler_back" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/customize_menu_recycle_view" android:background="@color/customize_menu_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

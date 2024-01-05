@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_black_dark" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/video_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.exoplayer2.ui.PlayerView android:id="@id/videoPlayer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="220.0dip" android:keepScreenOn="true" app:controller_layout_id="@layout/exo_playback_control_view" app:default_artwork="@drawable/at_placeholder" app:hide_on_touch="true" app:resize_mode="fixed_width" app:show_buffering="when_playing" app:use_controller="true" />
+            <RelativeLayout android:id="@id/rl_video_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/height_220">
+                <ImageView android:id="@id/iv_video_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:contentDescription="@string/large_image" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <ImageView android:id="@id/iv_video_play" android:layout_width="@dimen/_36sdp" android:layout_height="@dimen/_36sdp" android:scaleType="fitXY" android:layout_centerInParent="true" android:contentDescription="@string/large_image" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_article_list" android:padding="0.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include android:id="@id/no_connection_layout" android:visibility="gone" layout="@layout/no_connection" />
+</androidx.constraintlayout.widget.ConstraintLayout>

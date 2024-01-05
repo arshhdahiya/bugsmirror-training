@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/home_toolbar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="70.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/recyclerView">
+        <androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.android.kotlinbase.uicomponents.HomeBreakingComponent android:id="@id/homeComponent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:id="@id/das" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintTop_toBottomOf="@id/homeComponent" />
+            <com.google.android.material.tabs.TabLayout android:id="@id/tablayout" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="230.0dip" app:layout_constraintTop_toBottomOf="@id/das" app:tabBackground="@drawable/drawable_xml_selector" app:tabMode="fixed" app:tabSelectedTextColor="@color/white_black" app:tabTextColor="@color/grey">
+                <com.google.android.material.tabs.TabItem android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="AAJTAK" />
+                <com.google.android.material.tabs.TabItem android:background="@drawable/drawable_xml_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="INDIA TODAY" />
+            </com.google.android.material.tabs.TabLayout>
+            <VideoView android:id="@id/videPlayer" android:layout_width="fill_parent" android:layout_height="220.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tablayout" />
+            <com.android.kotlinbase.uicomponents.VideoControlComponent android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/videPlayer" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/related" android:background="@color/black_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/videPlayer">
+                <com.android.kotlinbase.uicomponents.HomeTvNewComponent android:id="@id/view1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="15.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/related2" android:background="@color/black_white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/related">
+                <com.android.kotlinbase.uicomponents.HomeTvNewComponent android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="15.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/related3" android:background="@color/black_white" android:paddingBottom="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/related2">
+                <com.android.kotlinbase.uicomponents.HomeTvNewComponent android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="15.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/related4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/related3">
+                <com.android.kotlinbase.uicomponents.HomeNewsFullImageComponent android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvRelatedItem" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/related4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
+        <include app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/layout_bottom_bar_home" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

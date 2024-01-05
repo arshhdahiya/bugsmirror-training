@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_redbox_oval_large_curve" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_subscribe_btn" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/bell_icon" android:contentDescription="@string/cd_image" android:layout_marginStart="6.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvSubscribeText" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribe" android:textAllCaps="true" android:textAlignment="center" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/iv_subscribe_btn" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

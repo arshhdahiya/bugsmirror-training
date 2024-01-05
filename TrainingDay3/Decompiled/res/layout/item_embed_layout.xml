@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_6sdp" android:layout_marginTop="@dimen/_3sdp" android:layout_marginRight="@dimen/_6sdp" android:layout_marginBottom="@dimen/_3sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/shimmerLayout" android:layout_width="fill_parent" android:layout_height="250.0dip" layout="@layout/shimmer_layout" />
+    <WebView android:id="@id/webView" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</RelativeLayout>

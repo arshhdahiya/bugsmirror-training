@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:background="#ffeaeaea" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+    <com.itg.itggaming.util.CustomFontTextView android:textSize="12.0sp" android:textColor="@color/itgg_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="ADVERTISEMENT" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ad_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="250.0dip" />
+        <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:shimmer_auto_start="true" app:shimmer_direction="left_to_right" app:shimmer_shape="linear">
+            <LinearLayout android:background="@color/itgg_shimmerColor" android:layout_width="fill_parent" android:layout_height="250.0dip" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

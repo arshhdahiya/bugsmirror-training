@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/main_content_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:elevation="@dimen/margin_4dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clTopBlack" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="50.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/ivClose" android:background="@drawable/ic_cross_icon_white" android:layout_width="60.0dip" android:layout_height="40.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/tvCountText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1/5" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <ImageView android:id="@id/ivPlay" android:background="@drawable/ic_play_icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginEnd="@dimen/margin_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@id/adViewContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/clTopBlack" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/vpImages" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.android.kotlinbase.uicomponents.PhotoCountCommentShareComponent android:id="@id/cmpCountShare" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/videodesclayout" app:layout_constraintEnd_toEndOf="@id/vpImages" />
+    <LinearLayout android:orientation="vertical" android:id="@id/videodesclayout" android:padding="@dimen/margin_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tvPhotoCaption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:singleLine="false" />
+        <TextView android:textColor="@color/colorRedLightasda" android:id="@id/seeMoreText" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/see_more" android:layout_marginStart="@dimen/margin_8" android:elevation="3.0dip" />
+    </LinearLayout>
+    <include android:id="@id/no_connection_layout" android:visibility="gone" app:layout_constraintTop_toBottomOf="@id/clTopBlack" layout="@layout/no_connection" />
+    <FrameLayout android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/podcast_vertical_mini_player" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

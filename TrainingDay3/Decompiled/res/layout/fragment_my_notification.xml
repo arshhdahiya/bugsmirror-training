@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvNotificationList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/margin_50" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/detailShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_search_details" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <TextView android:textColor="@color/red" android:gravity="center" android:id="@id/noData" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="@string/no_results_found" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

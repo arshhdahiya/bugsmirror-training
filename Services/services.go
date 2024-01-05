@@ -13,6 +13,7 @@ func ViewProfile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	//todo make this global
 	//destructing from request body
 	var reqBody struct {
 		UserID string `json:"userID"`
@@ -23,6 +24,7 @@ func ViewProfile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	//to do if empty strings then return
 	user, userExists := models.Users[reqBody.UserID]
 	if !userExists {
 		http.Error(w, "User not found", http.StatusNotFound)

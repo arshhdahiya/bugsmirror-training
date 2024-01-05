@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/itgg_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|enterAlways">
+            <androidx.appcompat.widget.Toolbar android:background="@color/itgg_toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:elevation="10.0dip" android:contentInsetStart="0.0dip" android:contentInsetEnd="0.0dip" android:contentInsetLeft="0.0dip" android:contentInsetRight="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:contentInsetStart="0.0dip">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="start" android:id="@id/iv_back_btn" android:background="@drawable/itgg_category_btn_ripple" android:padding="10.0dip" android:clickable="true" android:layout_width="28.0dip" android:layout_height="28.0dip" android:foreground="@drawable/itgg_ic_back_white" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="20.0dip" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <ImageView android:id="@id/ic_game" android:background="@drawable/itgg_ic_game_cube" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <com.itg.itggaming.util.CustomFontTextView android:textSize="22.0sp" android:textColor="@color/itgg_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itgg_game_heading" android:layout_marginStart="10.0dip" app:customFontStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="60.0dip" app:shimmer_auto_start="true" app:shimmer_direction="left_to_right" app:shimmer_shape="linear">
+        <include layout="@layout/layout_shimmer" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_gameLanding" android:background="@color/itgg_black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="vertical" android:id="@id/llSearchIcon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="@dimen/margin_5" android:layout_marginEnd="@dimen/_5sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:id="@id/icSearchClose" android:background="@drawable/search_close_border" android:padding="8.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/ic_search_close" android:scaleType="centerInside" android:layout_marginEnd="@dimen/margin_12" />
+    <ImageView android:layout_gravity="end" android:id="@id/icSearch" android:padding="8.0dip" android:visibility="visible" android:layout_width="35.0dip" android:layout_height="47.0dip" android:src="@drawable/ic_search" android:scaleType="centerInside" android:layout_marginEnd="@dimen/margin_12" />
+</LinearLayout>

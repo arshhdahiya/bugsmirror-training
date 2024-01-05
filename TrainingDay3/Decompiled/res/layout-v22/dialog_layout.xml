@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:background="@drawable/itgg_bg_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.itg.itggaming.util.CustomFontTextView android:textSize="20.0sp" android:textColor="@android:color/black" android:layout_gravity="center_horizontal" android:id="@id/tv_quit_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/itgg_quit_game" android:layout_centerHorizontal="true" app:customFontStyle="bold" />
+        <com.itg.itggaming.util.CustomFontTextView android:textSize="16.0sp" android:id="@id/quest" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/itgg_quit_quest" android:layout_below="@id/tv_quit_heading" android:layout_centerHorizontal="true" android:textAlignment="center" android:paddingHorizontal="10.0dip" app:customFontStyle="bold" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:layout_below="@id/quest">
+            <Button android:textStyle="bold" android:textColor="@color/itgg_white" android:id="@id/bt_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itgg_yes" android:elevation="10.0dip" android:backgroundTint="@color/itgg_bg_featured" />
+            <Button android:textStyle="bold" android:textColor="@color/itgg_white" android:id="@id/bt_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/itgg_no" android:backgroundTint="@color/itgg_bg_featured" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/videoLayout" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tbVideo" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_toolbar" />
+    <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_22" android:textStyle="bold" android:textColor="@color/white_black" android:id="@id/tvVideoTitle" android:background="@color/black_white" android:padding="@dimen/margin_4dp" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideo" />
+    <com.google.android.exoplayer2.ui.PlayerView android:id="@id/videoPlayer" android:layout_width="fill_parent" android:layout_height="220.0dip" android:keepScreenOn="true" app:buffered_color="@color/colorRed" app:controller_layout_id="@layout/exo_playback_control_view" app:hide_on_touch="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvVideoTitle" app:resize_mode="fixed_width" app:show_buffering="when_playing" app:use_controller="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rcVideoDetail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:layout_marginStart="8.0dip" android:layout_marginEnd="@dimen/margin_8" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/videoPlayer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/videoDetailShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/rcVideoDetail" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/shimmer_layout_video_detail" />
+            <include layout="@layout/shimmer_layout_video_detail" />
+            <include layout="@layout/shimmer_layout_video_detail" />
+            <include layout="@layout/shimmer_layout_video_detail" />
+            <include layout="@layout/shimmer_layout_video_detail" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include android:id="@id/relatedProgressPager" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+    <FrameLayout android:id="@id/videoCommentLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

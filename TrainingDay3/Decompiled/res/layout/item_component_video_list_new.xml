@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_width="180.0dip" android:layout_height="100.0dip" android:layout_margin="5.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/roundedImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/at_placeholder" android:scaleType="fitXY" />
+        <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@id/currently_playing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/now_playing" />
+        <include android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="15.0sp" layout="@layout/video_duration_long_item" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

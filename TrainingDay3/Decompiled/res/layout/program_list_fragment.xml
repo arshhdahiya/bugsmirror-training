@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tbVideoList" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/layout_toolbar_video_list" />
+    <TextView android:textColor="@color/design_default_color_error" android:gravity="center" android:id="@id/tvNoResult" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_results_found" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideoList" />
+    <RelativeLayout android:id="@id/no_connection_layout" android:background="@color/white_black" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideoList">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_noconnection" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20" android:src="@drawable/ic_no_internet" android:contentDescription="@string/at_breaking_news" />
+            <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_20" android:textColor="@color/black_white" android:id="@id/tv_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_30" android:text="@string/you_are_now_offline" app:customFontStyle="bold" />
+            <RelativeLayout android:id="@id/rl_retry" android:background="@drawable/border_bg_retry" android:paddingTop="@dimen/padding_10" android:paddingBottom="@dimen/padding_10" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_22" android:paddingStart="@dimen/margin_0" android:paddingEnd="@dimen/padding_16">
+                <ImageView android:id="@id/img_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_retry" android:layout_centerVertical="true" android:contentDescription="@string/at_breaking_news" android:layout_marginStart="@dimen/margin_8" />
+                <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_14" android:textStyle="bold" android:textColor="@color/color_retry_text" android:id="@id/tv_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" android:layout_marginStart="@dimen/margin_4" android:layout_toEndOf="@id/img_retry" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_16" android:textStyle="bold" android:textColor="@color/colorBlack_80" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_30" android:text="@string/view_saved_content" android:drawablePadding="@dimen/padding_8" android:layout_below="@id/ll_noconnection" android:layout_centerHorizontal="true" android:drawableEnd="@drawable/ic_right_arrow_grey" />
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/main_swiperefresh" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideoList">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rcVideoList" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategoryVideoLanding" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/videoListShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tbVideoList" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/shimmer_layout_video_list" />
+            <include layout="@layout/shimmer_layout_video_list" />
+            <include layout="@layout/shimmer_layout_video_list" />
+            <include layout="@layout/shimmer_layout_video_list" />
+            <include layout="@layout/shimmer_layout_video_list" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include android:id="@id/progressPager" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

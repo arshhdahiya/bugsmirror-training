@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/item_customize_menu" android:background="@drawable/bg_customize_item" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/item_icon" android:layout_width="11.0dip" android:layout_height="24.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_movable_menu_item" />
+    <com.android.kotlinbase.customize.CustomFontTextView android:textSize="20.0sp" android:textColor="@color/black_white" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="भारत" android:fontFamily="@font/notosans_regular" />
+</LinearLayout>

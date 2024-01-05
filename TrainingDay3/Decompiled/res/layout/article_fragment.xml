@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_black_dark" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/video_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.exoplayer2.ui.PlayerView android:id="@id/videoPlayer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="220.0dip" android:keepScreenOn="true" app:controller_layout_id="@layout/exo_playback_control_view" app:default_artwork="@drawable/at_placeholder" app:hide_on_touch="true" app:resize_mode="fixed_width" app:show_buffering="when_playing" app:use_controller="true" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_article_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include android:id="@id/no_connection_layout" android:visibility="gone" layout="@layout/no_connection" />
+    <include android:id="@id/progressPagerVideoLanding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:visibility="visible" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="700.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_layout_video_list" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

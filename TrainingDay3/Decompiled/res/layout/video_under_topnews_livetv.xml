@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_small_img" android:background="@drawable/border_white" android:layout_width="110.0dip" android:layout_height="70.0dip" android:scaleType="centerCrop" android:contentDescription="@string/cd_image" app:layout_constraintEnd_toStartOf="@id/title" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/white_black" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="मुंबई के Hyatt Regency होटल के पास सैलरी देने के पैसे नहीं, बंद हुआ कामकाज" android:maxLines="3" android:layout_marginStart="20.0dip" android:layout_marginEnd="15.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/iv_small_img" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

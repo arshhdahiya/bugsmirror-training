@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:n1="http://schemas.android.com/apk/distribution" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" n1:requiredSplitTypes="base__abi,base__density" n1:splitTypes="" package="in.AajTak.headlines" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:maxSdkVersion="18" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http"/>
+        </intent>
+        <package android:name="com.taboola.taboolasdkmonitor"/>
+        <package android:name="com.android.chrome"/>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <permission android:name="in.AajTak.headlines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="in.AajTak.headlines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:isSplitRequired="true" android:label="@string/app_name" android:largeHeap="true" android:name="com.android.kotlinbase.AajTakApplication" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+        <activity android:exported="false" android:name="com.android.kotlinbase.settings.CustomizationAppFeed">
+            <meta-data android:name="android.app.lib_name" android:value=""/>
+        </activity>
+        <receiver android:exported="true" android:name="com.android.kotlinbase.common.PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTask" android:name="com.android.kotlinbase.programdetails.ProgramDetailsActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:theme="@style/AppTheme"/>
+        <activity android:exported="true" android:name="com.android.kotlinbase.onboarding.OnboardingActivity" android:screenOrientation="unspecified" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTask" android:name="com.android.kotlinbase.shortVideo.ui.home.fragment.ShortVideoActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:name="com.android.kotlinbase.userprofile.UserProfile" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.android.kotlinbase.splash.SplashActivity" android:screenOrientation="portrait" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.android.kotlinbase.photodetail.PhotoDetailsActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:name="com.android.kotlinbase.photolistdetails.PhotoDetailsListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:name="com.android.kotlinbase.photolisting.PhotoListingActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.android.kotlinbase.videodetail.VideoDetailActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:taskAffinity=".VideoDetailActivity" android:theme="@style/AppTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.android.kotlinbase.scorecard.ScoreCardActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.android.kotlinbase.scorecard.WebViewActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:launchMode="singleTask" android:name="com.android.kotlinbase.home.HomeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:host="aajtak.link"/>
+                <data android:host="www.aajtak.link"/>
+                <data android:host="www.aajtak.onelink.me"/>
+                <data android:host="aajtak.onelink.me"/>
+                <data android:host="www.livingmedia.page.link"/>
+                <data android:host="livingmedia.page.link"/>
+                <data android:pathPrefix="/8PL0"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.aajtak.in"/>
+                <data android:host="aajtak.in"/>
+                <data android:host="www.alpha-aajtak-in.intoday.in"/>
+                <data android:host="alpha-aajtak-in.intoday.in"/>
+                <data android:host="www.alpha-at-custompath.intoday.in"/>
+                <data android:host="alpha-at-custompath.intoday.in"/>
+                <data android:host="www.podcasts.aajtak.in"/>
+                <data android:host="podcasts.aajtak.in"/>
+                <data android:pathPattern="/story/.*"/>
+                <data android:pathPattern="/.*/story/.*"/>
+                <data android:pathPattern="/.*/.*/story/.*"/>
+                <data android:pathPattern="/.*/.*/.*/story/.*"/>
+                <data android:pathPattern="/photo/.*"/>
+                <data android:pathPattern="/.*/photo/.*"/>
+                <data android:pathPattern="/.*/.*/photo/.*"/>
+                <data android:pathPattern="/.*/.*/.*/photo/.*"/>
+                <data android:pathPattern="/short-videos/.*"/>
+                <data android:pathPattern="/.*/short-videos/.*"/>
+                <data android:pathPattern="/.*/.*/short-videos/.*"/>
+                <data android:pathPattern="/.*/.*/.*/short-videos/.*"/>
+                <data android:pathPattern="/video/.*"/>
+                <data android:pathPattern="/.*/video/.*"/>
+                <data android:pathPattern="/.*/.*/video/.*"/>
+                <data android:pathPattern="/.*/.*/.*/video/.*"/>
+                <data android:pathPattern="/visualstories/.*"/>
+                <data android:pathPattern="/.*/visualstories/.*"/>
+                <data android:pathPattern="/.*/.*/visualstories/.*"/>
+                <data android:pathPattern="/.*/.*/.*/visualstories/.*"/>
+                <data android:pathPattern="/livetv/.*"/>
+                <data android:pathPattern="/livetv"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.pushwoosh.notification_icon" android:value="@drawable/pw_notification"/>
+        <meta-data android:name="com.pushwoosh.notification_icon_color" android:value="@color/colorAccent"/>
+        <meta-data android:name="com.pushwoosh.notification_service_extension" android:value="com.android.kotlinbase.notification.NotificationServiceSample"/>
+        <meta-data android:name="com.pushwoosh.notification_factory" android:value="com.android.kotlinbase.notification.NotificationFactorySample"/>
+        <service android:exported="true" android:name="com.android.kotlinbase.podcast.podcastplayer.MusicService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.android.kotlinbase.podcast.podcastplayer.PodcastDownloadService">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.android.kotlinbase.common.network.NetworkSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.android.kotlinbase.download.ArticleResourcesDownloadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="in.AajTak.headlines;in.AajTak.headlines.GameActivity.provider;in.AajTak.headlines.LeaderBoardActivity.provider;in.AajTak.headlines.ShabdamActivity.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+            <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@string/admob_app_id"/>
+        </provider>
+        <activity android:name="com.android.kotlinbase.articlerevamp.photogallery.PhotoGalleryActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.ktx.FirebasePerfKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="in.AajTak.headlines.firebasepushwooshinitprovider" android:enabled="true" android:exported="false" android:initOrder="54" android:name="com.pushwoosh.firebase.FirebaseInitProvider"/>
+        <service android:exported="false" android:name="com.pushwoosh.firebase.PushFcmIntentService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.pushwoosh.inapp.view.RichMediaWebActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.pushwoosh.inapp.view.RemoteUrlActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.pushwoosh.notification.NotificationOpenActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pushwoosh.BootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.pushwoosh.internal.utils.PermissionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.pushwoosh.notification.LocalNotificationReceiver"/>
+        <provider android:authorities="in.AajTak.headlines.pushwooshinitprovider" android:enabled="true" android:exported="false" android:initOrder="50" android:name="com.pushwoosh.PushwooshInitProvider"/>
+        <provider android:authorities="in.AajTak.headlines.PushwooshSharedDataProvider" android:enabled="true" android:exported="true" android:initOrder="60" android:name="com.pushwoosh.PushwooshSharedDataProvider"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.pushwoosh.NotificationUpdateReceiver"/>
+        <provider android:authorities="in.AajTak.headlines.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.pushwoosh.internal.fileprovider.PWFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/pw_provider_paths"/>
+        </provider>
+        <provider android:authorities="in.AajTak.headlines.TaboolaContextProvider" android:enabled="true" android:exported="false" android:initOrder="10" android:name="com.taboola.android.TaboolaContextProvider"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="in.AajTak.headlines.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="in.AajTak.headlines.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService"/>
+        <service android:name="com.chartbeat.androidsdk.ChartbeatService"/>
+        <provider android:authorities="in.AajTak.headlines.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <activity android:exported="false" android:name="com.itg.ssosdk.account.activity.BaseActivity" android:theme="@style/AppTheme"/>
+        <activity android:exported="false" android:name="com.itg.ssosdk.account.activity.WebViewActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.app.lib_name" android:value=""/>
+        </activity>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.itg.ssosdk.account.activity.SSOActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.app.lib_name" android:value=""/>
+        </activity>
+        <activity android:exported="false" android:name="com.itg.itggaming.gameWebView.GameWebViewActivity" android:theme="@style/noAnimTheme"/>
+        <activity android:exported="false" android:name="com.itg.itggaming.gameCategories.GameCategoryActivity" android:screenOrientation="portrait" android:theme="@style/noAnimTheme"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <activity android:exported="true" android:name="com.itg.itggaming.gameLanding.GameLandingActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:name="com.amazon.aps.ads.activity.ApsInterstitialActivity" android:theme="@style/NoWindow"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:name="com.amazon.device.ads.DTBInterstitialActivity"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="4"/>
+    </application>
+</manifest>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rl_rt_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/layout_rt_shimmer" />
+            <include layout="@layout/layout_rt_shimmer" />
+            <include layout="@layout/layout_rt_shimmer" />
+            <include layout="@layout/layout_rt_shimmer" />
+            <include layout="@layout/layout_rt_shimmer" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/resultTallyDetails" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_10" android:layout_marginBottom="@dimen/margin_5" android:layout_marginStart="@dimen/margin_5" android:layout_marginEnd="@dimen/margin_5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/middle_layout" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerHorizontal="true" android:layout_marginStart="69.0dip" app:layout_constraintBottom_toBottomOf="@id/resultTallyDetails" app:layout_constraintEnd_toEndOf="@id/resultTallyDetails" app:layout_constraintStart_toStartOf="@id/resultTallyDetails" app:layout_constraintTop_toTopOf="@id/resultTallyDetails">
+        <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/black_white" android:id="@id/to_win_tv" android:padding="@dimen/margin_2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@id/middle_line" app:layout_constraintStart_toStartOf="@id/middle_line" app:layout_constraintTop_toTopOf="parent" />
+        <ImageView android:id="@id/image" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="centerCrop" android:layout_below="@id/to_win_tv" android:contentDescription="@string/a_text" android:rotation="-90.0" app:layout_constraintEnd_toEndOf="@id/middle_line" app:layout_constraintStart_toStartOf="@id/middle_line" app:layout_constraintTop_toBottomOf="@id/to_win_tv" app:srcCompat="@drawable/ic_baseline_up_arrow_24" />
+        <ImageView android:id="@id/middle_line" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@drawable/line_vertical" android:contentDescription="@string/a_text" android:layerType="software" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout android:id="@id/graph_table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:divider="?android:listDivider" android:showDividers="middle" android:layout_marginStart="@dimen/margin_5" android:layout_marginEnd="@dimen/margin_5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/resultTallyDetails" />
+</androidx.constraintlayout.widget.ConstraintLayout>

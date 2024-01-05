@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/auth_video_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginEnd="@dimen/margin_10" app:layout_constraintBottom_toTopOf="@id/videodesclayout" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/anchor_node_item" />
+    <LinearLayout android:orientation="vertical" android:id="@id/videodesclayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/auth_video_detail">
+        <TextView android:textSize="@dimen/font_20" android:textColor="@color/black_white" android:id="@id/tvVideoDesc" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin_8" android:maxLines="3" android:paddingStart="@dimen/margin_8" android:paddingEnd="@dimen/margin_8" app:layout_constraintStart_toStartOf="parent" />
+        <TextView android:id="@id/seeMoreText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_more_" android:layout_marginStart="@dimen/margin_8" app:layout_constraintBottom_toBottomOf="@id/tvVideoDesc" app:layout_constraintEnd_toEndOf="@id/tvVideoDesc" />
+    </LinearLayout>
+    <View android:background="@color/grey_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="10.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/videodesclayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

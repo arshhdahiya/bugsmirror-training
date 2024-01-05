@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_podcast" android:id="@id/podcast" android:title="Podcast" />
+    <item android:icon="@drawable/ic_live_tv" android:id="@id/liveTv" android:title="लाइव टीवी" />
+    <item android:icon="@drawable/ic_home" android:id="@id/home" android:title="@string/home_hin" />
+    <item android:icon="@drawable/ic_my_feed" android:title="माय फीड" />
+    <item android:icon="@drawable/notification_hub" android:id="@id/notification" android:title="Notification" />
+</menu>

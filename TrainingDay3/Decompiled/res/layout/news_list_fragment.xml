@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/firstViewLine" android:background="@color/grey_seperator" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintBottom_toTopOf="@id/rvCategorySessionLanding" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <include android:id="@id/no_connection_layout" android:visibility="gone" layout="@layout/no_connection" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvCategorySessionLanding" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/firstViewLine" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/main_swiperefresh" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategorySessionLanding">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvSessionLanding" android:background="@color/white_black_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategoryVideoLanding" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/sessionLandingShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvCategorySessionLanding" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_layout_video_landing" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include android:id="@id/progressSessionLanding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/item_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

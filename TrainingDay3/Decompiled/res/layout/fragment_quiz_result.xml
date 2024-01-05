@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/quiz_gradient_bg" android:paddingBottom="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/white_black" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/tbMainBackArrow" android:background="?selectableItemBackground" android:padding="@dimen/icon_padding" android:layout_width="@dimen/back_icon_size" android:layout_height="@dimen/back_icon_size" android:src="@drawable/ic_nav_back" android:contentDescription="@string/cd_image" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/black_white" android:id="@id/tbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quiz" android:layout_marginStart="30.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/tbMainBackArrow" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:id="@id/nsScroll" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_scoreResultLayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" app:layout_constraintTop_toTopOf="parent">
+                <include android:id="@id/scoreResultLayout" layout="@layout/quiz_result_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/moreQuiz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_quiz_for_you" android:fontFamily="@font/notosans_bold" android:layout_marginStart="@dimen/_5sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/cl_scoreResultLayout" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvQuizList" android:paddingBottom="@dimen/_15sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/margin_50" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/moreQuiz" />
+            <TextView android:textColor="@color/red" android:gravity="center" android:id="@id/noData" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="@string/no_results_found" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/moreQuiz" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/detailShimmer" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" app:shimmer_repeat_mode="restart" app:shimmer_shape="radial">
+        <include layout="@layout/shimmer_search_details" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

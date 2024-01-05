@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$quiz_share__0" android:pathData="M16,0L16,0A16,16 0,0 1,32 16L32,16A16,16 0,0 1,16 32L16,32A16,16 0,0 1,0 16L0,16A16,16 0,0 1,16 0z" />
+    <path android:fillColor="#ff000000" android:pathData="M21.067,7a2.613,2.613 0,1 1,-2.614 2.614,2.614 2.614,0 0,1 2.614,-2.614" />
+    <path android:fillColor="#ff000000" android:pathData="M10.613,13.098a2.613,2.613 0,1 1,-2.613 2.613,2.613 2.613,0 0,1 2.613,-2.613" />
+    <path android:fillColor="#ff000000" android:pathData="M21.067,19.196a2.613,2.613 0,1 1,-2.614 2.614,2.614 2.614,0 0,1 2.614,-2.614" />
+    <path android:fillColor="#ff000000" android:pathData="M12.519,17.63l0.701,-1.204l5.951,3.467l-0.701,1.204z" />
+    <path android:fillColor="#ff000000" android:pathData="M12.519,13.795l5.941,-3.467l0.703,1.204l-5.941,3.467z" />
+</vector>

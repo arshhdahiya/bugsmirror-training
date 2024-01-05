@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_3sdp" android:layout_marginBottom="@dimen/_3sdp" android:layout_marginVertical="@dimen/_3sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_ad_main" android:background="@color/ads_background" android:padding="6.0sp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.android.kotlinbase.customize.CustomFontTextView android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@id/tvAdd" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ads_text" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp">
+            <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer_ad" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="250.0dip" android:layout_marginLeft="6.0sp" android:layout_marginRight="6.0sp" android:layout_centerInParent="true" android:layout_marginHorizontal="6.0sp" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ad_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="250.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

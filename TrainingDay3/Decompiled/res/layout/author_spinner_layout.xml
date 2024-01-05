@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <View android:id="@id/bg_view_profile" android:background="@drawable/red_round_profile_image" android:visibility="invisible" android:layout_width="39.0dip" android:layout_height="39.0dip" android:layout_centerVertical="true" android:layout_marginStart="16.349976dip" />
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/author_spinner_profile_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/at_placeholder" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" />
+        <com.android.kotlinbase.customize.CustomFontTextView android:textSize="@dimen/font_14" android:textColor="@color/black_white" android:id="@id/txt_spinner_author_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_toRightOf="@id/author_spinner_profile_image" android:layout_centerVertical="true" android:lineSpacingExtra="2.6999817sp" app:customFontStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

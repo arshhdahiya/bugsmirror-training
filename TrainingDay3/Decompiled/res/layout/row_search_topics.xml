@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/font_15" android:textColor="@color/black_white" android:id="@id/textView" android:tag="layout/row_search_topics_0" android:background="@drawable/border_gray_dark_trend" android:paddingLeft="@dimen/margin_16" android:paddingTop="@dimen/margin_6" android:paddingRight="@dimen/margin_16" android:paddingBottom="@dimen/margin_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minWidth="@dimen/margin_20" android:textAlignment="center"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

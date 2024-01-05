@@ -1,0 +1,93 @@
+   
+/*pointer-section css*/
+ body{ margin: 0 auto; padding :0px; list-style: none;}
+ .pointer-section{width: 100%; height: auto; display: flex; flex-wrap: wrap;}
+ .pointer-section .listicle-title{font-size: 20px;font-weight: bold; color: #000; margin-bottom: 15px;}
+ .pointer-section ul{margin: 0px; padding: 0px; list-style: none; width:100%;display: flex;flex-wrap: wrap; padding :0px 10px 0px 25px}
+ .pointer-section ul li {
+     border: 1px solid #eee;
+     padding: 15px 20px;
+     border-radius: 7px;
+     margin-bottom: 20px;
+     box-shadow: 3px 3px 8px #ddd;
+     position: relative;
+     width:100%;
+     background-color: #fff;
+     padding-left: 55px;
+     min-height: 100px;
+ }
+
+ .pointer-section ul li:before {
+     content: '';
+     position: absolute;
+     top: -1px;
+     left: -20px;
+     height: 90px;
+     width: 45px;
+     background-color: #E13129;
+     border-radius: 9px;
+     z-index: -1;
+ }
+ .pointer-section ul li span {
+     position: absolute;
+     top: 15px;
+     left: -14px;
+     background-color: #E13129;
+     width: 53px;
+     height: 53px;
+     border-radius: 50%;
+     align-items: center;
+     border: 5px solid #fff;
+     text-align: center;
+     color: #fff;
+     font-weight: bold;
+     font-size: 30px;
+     line-height: 43px;
+     box-shadow: 3px 3px 6px #9d9d9d;
+ }
+
+ .pointer-section ul li p{
+     color: #000;
+     line-height: 25px;
+     margin-bottom: 10px;
+     font-size: 17px;}
+
+
+ .pointer-section ul li p:empty {
+     line-height: 0px;
+     font-size: 0px;
+     margin: 0px;
+     padding: 0px;
+ }
+
+ .pointer-section ul li h4 {
+     color: #000;
+     font-size: 18px;
+     margin-bottom: 5px;
+ }
+
+
+ @media only screen and (max-width: 767px){
+ .pointer-section ul li span {top: 19px; width: 38px; height: 38px; font-size: 24px; line-height: 38px;}
+ .pointer-section ul li {padding-left: 43px;}
+ }
+.pointer-section ul li span {top: 19px; width: 38px; height: 38px; font-size: 24px; line-height: 38px;}
+.pointer-section ul li {padding-left: 43px;}
+ }
+.pointer-section .listicle-title {color: #fff;}
+.pointer-section ul li {border: 1px solid #424242; box-shadow: none; background-color: #626262;}
+.pointer-section ul li span {box-shadow: none;}
+.pointer-section ul li h4 {color: #fff;}
+.pointer-section ul li p a {color: #ff9a9a;}
+.pointer-section ul li p{color: #fff;}
+
+.pointer-section ul li p iframe {
+    min-width: 200px !important;
+}
+
+
+.pointer-section ul li p iframe {
+    min-width: 200px !important;
+}
+/*pointer-section css end*/  
+    

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/tabll" android:background="@drawable/btn_bf_election_select_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:gravity="center" android:id="@id/tab_state_name" android:paddingTop="@dimen/margin_5" android:paddingBottom="@dimen/margin_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:foregroundGravity="center_horizontal" android:fontFamily="@font/font_regular" android:textAlignment="center" android:paddingStart="@dimen/margin_10" android:paddingEnd="@dimen/margin_10" android:layout_marginStart="@dimen/_10sdp" android:layout_marginEnd="@dimen/_10sdp" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tab_seat_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_5" android:layout_below="@id/tab_state_name" android:fontFamily="@font/font_regular" />
+</LinearLayout>
